@@ -1,0 +1,177 @@
+*{
+ margin: 0;
+ padding: 0;
+ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+:root {
+    --primary-color: rgb(192, 223, 174);
+    --secondary-color: rgb(19, 182, 119);
+}
+
+header {
+    background-color: var(--primary-color);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+}
+
+header nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;   
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: black; 
+}
+
+header nav ul li a:hover {
+    color: var(--secondary-color)
+}
+
+.banner {
+    width: 100%;
+    display: flex;
+  }
+  
+  .bannerIzq {
+    width: 100%;
+    background-color: rgb(192, 223, 174);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .bannerIzq p {
+    font-size: 20px;
+  }
+  .bannerDer {
+    width: 100%;
+    background-color: var(--primary-color);
+    background-image: url(../assets/logo_awash-removebg-preview.png);
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .bannerIzq h1 {
+    color: rgb(56, 126, 47);
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+
+#banner h1 {
+  font-size: 40px;
+}
+
+#banner p {
+    width: 90%;
+    font-size: 100%;
+    color: white; 
+}
+
+#projects,
+#beer {
+    text-align: center;
+}
+
+#projects h2,
+#beer h2,
+#contact h2 {
+  font-size: 30px;
+}
+
+#projects .container-grid-projects,
+#beer .container-grid-beer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  padding: 20px;
+}
+
+#projects .card,
+#beer .card {
+  padding: 20px;
+  border: 1px solid rgb(230, 230, 230);
+  box-shadow: 6px 5px 45px -15px rgba(155, 150, 150, 0.75);
+  border-radius: 10px;
+  transition: 0.3s transform;
+}
+
+#projects .card:hover {
+  transform: scale(1.03);
+}
+
+#projects .card a,
+#beer .card a,
+#contact button {
+  text-decoration: none;
+  border: 1px solid rgb(165, 109, 5);
+  padding: 5px 10px;
+  display: block;
+  width: 50%;
+  margin: 10px auto;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+#beer {
+  background-color: azure;
+  
+}
+
+#beer .card {
+  background-color: rgb(192, 223, 174) s;
+  img {width: 100%};
+  text-align: center;
+}
+
+/* Contacto */
+#contact h2 {
+  text-align: center;
+}
+
+form {
+  width: 70%;
+  padding: 30px;
+  margin: auto;
+}
+
+form * {
+  display: block;
+  width: 100%;
+  margin: 5px 0;
+  border: none;
+  outline: none;
+}
+
+form input,
+textarea {
+  border: 1px solid gray;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+footer {
+  padding: 20px;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+@media (max-width: 880px) {
+  #beer .container-grid-beer,
+  #projects .container-grid-projects {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  #beer .container-grid-beer,
+  #projects .container-grid-projects {
+    grid-template-columns: 1fr;
+  }
+}
